@@ -1,4 +1,4 @@
-# API-Shopify-PHP
+# Connecting Shopify with PHP
 Configuration Minimaliste pour la création d'une application PHP sous Shopify
 # A savoir
   - Bien lire les commentaires dans les fichiers pour mieux comprendre le processus
