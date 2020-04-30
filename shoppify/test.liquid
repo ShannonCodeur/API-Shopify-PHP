@@ -1,0 +1,34 @@
+<h1>{{ section.settings.header }}</h1>
+{%- assign count = section.settings.reviews_count | escape -%}
+<ul>
+{% for i in (1..count) %}
+ <li>Review number {{ forloop.index }}</li>
+{% endfor %}
+</ul>
+
+{% schema %}
+ {
+   "name": {
+     "en": "Product review",
+     "fr": "Revues de produits"
+   },
+   "supports": ["product"],
+   "settings": [
+     {
+       "type": "text",
+       "id": "header",
+       "label": "Header",
+       "default": "Product reviews"
+     },
+     {
+       "type": "range",
+       "id": "reviews_count",
+       "label": "Reviews count",
+       "default": 4,
+       "min": 1,
+       "max": 10,
+       "step": 1
+     }
+   ]
+ }
+{% endschema %}
